@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/openbeautyfacts/openbeautyfacts-ruby.svg?branch=master)](https://travis-ci.org/openbeautyfacts/openbeautyfacts-ruby)
 [![Dependency Status](https://gemnasium.com/openbeautyfacts/openbeautyfacts-ruby.svg)](https://gemnasium.com/openbeautyfacts/openbeautyfacts-ruby)
 [![Code Climate](https://codeclimate.com/github/openbeautyfacts/openbeautyfacts-ruby/badges/gpa.svg)](https://codeclimate.com/github/openbeautyfacts/openbeautyfacts-ruby)
-[![Coverage Status](https://coveralls.io/repos/nicolasleger/openbeautyfacts-ruby/badge.svg)](https://coveralls.io/r/nicolasleger/openbeautyfacts-ruby)
+[![Coverage Status](https://coveralls.io/repos/github/openfoodfacts/openbeautyfacts-ruby/badge.svg?branch=master)](https://coveralls.io/github/openbeautyfacts/openbeautyfacts-ruby?branch=master)
 [![Documentation](http://inch-ci.org/github/openbeautyfacts/openbeautyfacts-ruby.svg?branch=master)](http://inch-ci.org/github/openbeautyfacts/openbeautyfacts-ruby)
 
 API Wrapper for [Open Beauty Facts](http://openbeautyfacts.org/), the open database about beauty products.
