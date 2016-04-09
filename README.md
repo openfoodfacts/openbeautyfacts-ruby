@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/nicolasleger/openbeautyfacts-ruby/badge.svg)](https://coveralls.io/r/nicolasleger/openbeautyfacts-ruby)
 [![Documentation](http://inch-ci.org/github/openbeautyfacts/openbeautyfacts-ruby.svg?branch=master)](http://inch-ci.org/github/openbeautyfacts/openbeautyfacts-ruby)
 
-API Wrapper for [Open Beauty Facts](https://openbeautyfacts.org/), the open database about beauty products.
+API Wrapper for [Open Beauty Facts](http://openbeautyfacts.org/), the open database about beauty products.
 
 ## Installation
 
