@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://world.openbeautyfacts.org/cgi/session.pl
+    body:
+      encoding: US-ASCII
+      string: jqm=1&user_id=wrong&password=absolutely
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - world.openbeautyfacts.org
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Apr 2016 17:39:42 GMT
+      Server:
+      - Apache/2.2.29 (Unix) mod_perl/2.0.8 Perl/v5.10.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":"undefined user"}'
+    http_version: 
+  recorded_at: Sat, 09 Apr 2016 17:36:15 GMT
+recorded_with: VCR 3.0.1
