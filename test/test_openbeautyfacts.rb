@@ -121,7 +121,7 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_products_with_additive
     additive = ::Openbeautyfacts::Additive.new("url" => "http://world.openbeautyfacts.org/additive/e539-sodium-thiosulfate")
     VCR.use_cassette("products_with_additive") do
-      products_with_additive = additive.products(page: -1)
+      products_with_additive = additive.products(page: 1)
       refute_empty products_with_additive
     end
   end
@@ -145,7 +145,7 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_products_for_brand
     brand = ::Openbeautyfacts::Brand.new("url" => "http://world.openbeautyfacts.org/brand/sedapoux")
     VCR.use_cassette("products_for_brand") do
-      products_for_brand = brand.products(page: -1)
+      products_for_brand = brand.products(page: 1)
       refute_empty products_for_brand
     end
   end
@@ -169,8 +169,56 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_products_for_state
     product_state = ::Openbeautyfacts::ProductState.new("url" => "http://world.openbeautyfacts.org/state/photos-uploaded", "products_count" => 22)
     VCR.use_cassette("products_for_state") do
-      products_for_state = product_state.products(page: -1)
+      products_for_state = product_state.products(page: 1)
       refute_empty products_for_state
+    end
+  end
+
+  # Ingredients
+
+  def test_it_fetches_ingredients
+    VCR.use_cassette("ingredients") do
+      ingredients = ::Openbeautyfacts::Ingredient.all
+      assert_includes ingredients.map { |ingredient| ingredient['name'] }, "Water"
+    end
+  end
+
+  def test_it_fetches_ingredients_for_locale
+    VCR.use_cassette("ingredients_locale") do
+      ingredients = ::Openbeautyfacts::Ingredient.all(locale: 'fr')
+      assert_includes ingredients.map { |ingredient| ingredient['name'] }, "Eau"
+    end
+  end
+
+  def test_it_fetches_products_for_ingredient
+    ingredient = ::Openbeautyfacts::Ingredient.new("url" => "http://world.openbeautyfacts.org/ingredient/water")
+    VCR.use_cassette("products_for_ingredient") do
+      products_for_ingredient = ingredient.products(page: 1)
+      refute_empty products_for_ingredient
+    end
+  end
+
+  # Period after openings
+
+  def test_it_fetches_period_after_openings
+    VCR.use_cassette("period_after_openings") do
+      period_after_openings = ::Openbeautyfacts::PeriodAfterOpening.all
+      assert_includes period_after_openings.map { |period_after_opening| period_after_opening['name'] }, "12 months"
+    end
+  end
+
+  def test_it_fetches_period_after_openings_for_locale
+    VCR.use_cassette("period_after_openings_locale") do
+      period_after_openings = ::Openbeautyfacts::PeriodAfterOpening.all(locale: 'fr')
+      assert_includes period_after_openings.map { |period_after_opening| period_after_opening['name'] }, "12 mois"
+    end
+  end
+
+  def test_it_fetches_products_for_period_after_opening
+    period_after_opening = ::Openbeautyfacts::PeriodAfterOpening.new("url" => "http://world.openbeautyfacts.org/period-after-opening/12-months")
+    VCR.use_cassette("products_for_period_after_opening") do
+      products_for_period_after_opening = period_after_opening.products(page: 1)
+      refute_empty products_for_period_after_opening
     end
   end
 
