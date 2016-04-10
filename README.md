@@ -1,11 +1,11 @@
 # Open Beauty Facts
 
 [![Gem Version](https://badge.fury.io/rb/openbeautyfacts.svg)](http://badge.fury.io/rb/openbeautyfacts)
-[![Build Status](https://travis-ci.org/openbeautyfacts/openbeautyfacts-ruby.svg?branch=master)](https://travis-ci.org/openbeautyfacts/openbeautyfacts-ruby)
-[![Dependency Status](https://gemnasium.com/openbeautyfacts/openbeautyfacts-ruby.svg)](https://gemnasium.com/openbeautyfacts/openbeautyfacts-ruby)
-[![Code Climate](https://codeclimate.com/github/openbeautyfacts/openbeautyfacts-ruby/badges/gpa.svg)](https://codeclimate.com/github/openbeautyfacts/openbeautyfacts-ruby)
-[![Coverage Status](https://coveralls.io/repos/github/openfoodfacts/openbeautyfacts-ruby/badge.svg?branch=master)](https://coveralls.io/github/openbeautyfacts/openbeautyfacts-ruby?branch=master)
-[![Documentation](http://inch-ci.org/github/openbeautyfacts/openbeautyfacts-ruby.svg?branch=master)](http://inch-ci.org/github/openbeautyfacts/openbeautyfacts-ruby)
+[![Build Status](https://travis-ci.org/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](https://travis-ci.org/openfoodfacts/openbeautyfacts-ruby)
+[![Dependency Status](https://gemnasium.com/openfoodfacts/openbeautyfacts-ruby.svg)](https://gemnasium.com/openfoodfacts/openbeautyfacts-ruby)
+[![Code Climate](https://codeclimate.com/github/openfoodfacts/openbeautyfacts-ruby/badges/gpa.svg)](https://codeclimate.com/github/openfoodfacts/openbeautyfacts-ruby)
+[![Coverage Status](https://coveralls.io/repos/github/openfoodfacts/openbeautyfacts-ruby/badge.svg?branch=master)](https://coveralls.io/github/openfoodfacts/openbeautyfacts-ruby?branch=master)
+[![Documentation](http://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](http://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby)
 
 API Wrapper for [Open Beauty Facts](http://openbeautyfacts.org/), the open database about beauty products.
 
@@ -104,7 +104,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/openbeautyfacts/openbeautyfacts-ruby/fork )
+1. Fork it ( https://github.com/openfoodfacts/openbeautyfacts-ruby/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
