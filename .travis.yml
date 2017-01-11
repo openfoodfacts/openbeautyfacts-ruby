@@ -14,5 +14,6 @@ matrix:
   allow_failures:
     - rvm: ruby-head
     - rvm: jruby-head
+    - rvm: rbx-2
 notifications:
   slack: openfoodfacts:oicZXgD1SNoGCA6EXLK6CB7i
