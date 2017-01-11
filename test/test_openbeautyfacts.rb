@@ -66,8 +66,8 @@ class TestOpenbeautyfacts < Minitest::Test
       products = ::Openbeautyfacts::Product.search(term, page_size: 24)
       first_product = products.first
 
-      assert_match /#{term}/i, products.last["product_name"]
-      assert_match /#{term}/i, ::Openbeautyfacts::Product.search(term).last["product_name"]
+      assert_match(/#{term}/i, products.last["product_name"])
+      assert_match(/#{term}/i, ::Openbeautyfacts::Product.search(term).last["product_name"])
       assert_equal products.size, 24
     end
 
