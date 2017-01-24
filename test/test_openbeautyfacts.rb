@@ -37,7 +37,7 @@ class TestOpenbeautyfacts < Minitest::Test
 
   def test_it_returns_product_weburl
     product = ::Openbeautyfacts::Product.new(code: "3600550362626")
-    assert_equal "http://world.openbeautyfacts.org/product/#{product.code}", product.weburl(locale: 'world')
+    assert_equal "https://world.openbeautyfacts.org/product/#{product.code}", product.weburl(locale: 'world')
   end
 
   def test_it_fetches_product
@@ -106,7 +106,7 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_additives
     VCR.use_cassette("additives") do
       additives = ::Openbeautyfacts::Additive.all(locale: 'fr') # FR to have riskiness
-      assert_equal "http://fr.openbeautyfacts.org/additif/e470-sels-de-sodium-potassium-calcium-d-acides-gras", additives.first.url
+      assert_equal "https://fr.openbeautyfacts.org/additif/e470-sels-de-sodium-potassium-calcium-d-acides-gras", additives.first.url
       refute_nil additives.detect { |additive| !additive['riskiness'].nil? }
     end
   end
@@ -114,12 +114,12 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_additives_for_locale
     VCR.use_cassette("additives_locale") do
       additives = ::Openbeautyfacts::Additive.all(locale: 'fr')
-      assert_equal "http://fr.openbeautyfacts.org/additif/e470-sels-de-sodium-potassium-calcium-d-acides-gras", additives.first.url
+      assert_equal "https://fr.openbeautyfacts.org/additif/e470-sels-de-sodium-potassium-calcium-d-acides-gras", additives.first.url
     end
   end
 
   def test_it_fetches_products_with_additive
-    additive = ::Openbeautyfacts::Additive.new("url" => "http://world.openbeautyfacts.org/additive/e539-sodium-thiosulfate")
+    additive = ::Openbeautyfacts::Additive.new("url" => "https://world.openbeautyfacts.org/additive/e539-sodium-thiosulfate")
     VCR.use_cassette("products_with_additive") do
       products_with_additive = additive.products(page: 1)
       refute_empty products_with_additive
@@ -143,7 +143,7 @@ class TestOpenbeautyfacts < Minitest::Test
   end
 
   def test_it_fetches_products_for_brand
-    brand = ::Openbeautyfacts::Brand.new("url" => "http://world.openbeautyfacts.org/brand/sedapoux")
+    brand = ::Openbeautyfacts::Brand.new("url" => "https://world.openbeautyfacts.org/brand/sedapoux")
     VCR.use_cassette("products_for_brand") do
       products_for_brand = brand.products(page: 1)
       refute_empty products_for_brand
@@ -155,19 +155,19 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_product_states
     VCR.use_cassette("product_states") do
       product_states = ::Openbeautyfacts::ProductState.all
-      assert_equal "http://world.openbeautyfacts.org/state/empty", product_states.last.url
+      assert_equal "https://world.openbeautyfacts.org/state/empty", product_states.last.url
     end
   end
 
   def test_it_fetches_product_states_for_locale
     VCR.use_cassette("product_states_locale") do
       product_states = ::Openbeautyfacts::ProductState.all(locale: 'fr')
-      assert_equal "http://fr.openbeautyfacts.org/etat/vide", product_states.last.url
+      assert_equal "https://fr.openbeautyfacts.org/etat/vide", product_states.last.url
     end
   end
 
   def test_it_fetches_products_for_state
-    product_state = ::Openbeautyfacts::ProductState.new("url" => "http://world.openbeautyfacts.org/state/photos-uploaded", "products_count" => 22)
+    product_state = ::Openbeautyfacts::ProductState.new("url" => "https://world.openbeautyfacts.org/state/photos-uploaded", "products_count" => 22)
     VCR.use_cassette("products_for_state") do
       products_for_state = product_state.products(page: 1)
       refute_empty products_for_state
@@ -191,7 +191,7 @@ class TestOpenbeautyfacts < Minitest::Test
   end
 
   def test_it_fetches_products_for_ingredient
-    ingredient = ::Openbeautyfacts::Ingredient.new("url" => "http://world.openbeautyfacts.org/ingredient/water")
+    ingredient = ::Openbeautyfacts::Ingredient.new("url" => "https://world.openbeautyfacts.org/ingredient/water")
     VCR.use_cassette("products_for_ingredient") do
       products_for_ingredient = ingredient.products(page: 1)
       refute_empty products_for_ingredient
@@ -215,7 +215,7 @@ class TestOpenbeautyfacts < Minitest::Test
   end
 
   def test_it_fetches_products_for_period_after_opening
-    period_after_opening = ::Openbeautyfacts::PeriodAfterOpening.new("url" => "http://world.openbeautyfacts.org/period-after-opening/12-months")
+    period_after_opening = ::Openbeautyfacts::PeriodAfterOpening.new("url" => "https://world.openbeautyfacts.org/period-after-opening/12-months")
     VCR.use_cassette("products_for_period_after_opening") do
       products_for_period_after_opening = period_after_opening.products(page: 1)
       refute_empty products_for_period_after_opening

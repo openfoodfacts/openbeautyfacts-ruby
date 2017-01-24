@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/api/v0/produit/3600550362626.json
+    uri: https://world.openbeautyfacts.org/api/v0/produit/3600550362626.json
     body:
       encoding: US-ASCII
       string: ''

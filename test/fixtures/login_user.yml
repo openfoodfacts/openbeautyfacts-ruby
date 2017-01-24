@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://world.openbeautyfacts.org/cgi/session.pl
+    uri: https://world.openbeautyfacts.org/cgi/session.pl
     body:
       encoding: US-ASCII
       string: jqm=1&user_id=wrong&password=absolutely

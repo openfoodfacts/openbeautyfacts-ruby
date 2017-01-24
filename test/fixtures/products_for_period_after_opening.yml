@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/period-after-opening/12-months/1
+    uri: https://world.openbeautyfacts.org/period-after-opening/12-months/1
     body:
       encoding: US-ASCII
       string: ''

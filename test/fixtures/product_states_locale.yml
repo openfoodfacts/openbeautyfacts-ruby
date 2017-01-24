@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fr.openbeautyfacts.org/etats
+    uri: https://fr.openbeautyfacts.org/etats
     body:
       encoding: US-ASCII
       string: ''

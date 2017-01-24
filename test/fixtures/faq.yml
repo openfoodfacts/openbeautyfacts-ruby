@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fr.openbeautyfacts.org/questions-frequentes
+    uri: https://fr.openbeautyfacts.org/questions-frequentes
     body:
       encoding: US-ASCII
       string: ''

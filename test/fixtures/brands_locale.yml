@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fr.openbeautyfacts.org/marques
+    uri: https://fr.openbeautyfacts.org/marques
     body:
       encoding: US-ASCII
       string: ''
