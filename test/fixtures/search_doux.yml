@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/cgi/search.pl?jqm=1&page=1&page_size=24&search_terms=doux&sort_by=unique_scans_n
+    uri: https://world.openbeautyfacts.org/cgi/search.pl?jqm=1&page=1&page_size=24&search_terms=doux&sort_by=unique_scans_n
     body:
       encoding: US-ASCII
       string: ''
@@ -291,7 +291,7 @@ http_interactions:
   recorded_at: Sat, 09 Apr 2016 17:36:18 GMT
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/cgi/search.pl?jqm=1&page=1&page_size=20&search_terms=doux&sort_by=unique_scans_n
+    uri: https://world.openbeautyfacts.org/cgi/search.pl?jqm=1&page=1&page_size=20&search_terms=doux&sort_by=unique_scans_n
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/cgi/search.pl?jqm=1&page=2&page_size=20&search_terms=doux&sort_by=unique_scans_n
+    uri: https://world.openbeautyfacts.org/cgi/search.pl?jqm=1&page=2&page_size=20&search_terms=doux&sort_by=unique_scans_n
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/additive/e539-sodium-thiosulfate/1
+    uri: https://world.openbeautyfacts.org/additive/e539-sodium-thiosulfate/1
     body:
       encoding: US-ASCII
       string: ''
@@ -868,7 +868,7 @@ http_interactions:
   recorded_at: Sat, 09 Apr 2016 17:36:15 GMT
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/additive/e539-sodium-thiosulfate/2
+    uri: https://world.openbeautyfacts.org/additive/e539-sodium-thiosulfate/2
     body:
       encoding: US-ASCII
       string: ''

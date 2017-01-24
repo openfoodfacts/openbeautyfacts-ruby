@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fr.openbeautyfacts.org/ingredients
+    uri: https://fr.openbeautyfacts.org/ingredients
     body:
       encoding: US-ASCII
       string: ''

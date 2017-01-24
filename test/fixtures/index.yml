@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://openbeautyfacts.org/
+    uri: https://openbeautyfacts.org/
     body:
       encoding: US-ASCII
       string: ''
@@ -164,6 +164,6 @@ http_interactions:
         Z2V0cy5qcyI7ZmpzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGpzLGZqcyk7
         fX0oZG9jdW1lbnQsInNjcmlwdCIsInR3aXR0ZXItd2pzIik7PC9zY3JpcHQ+
         CQoKCjwvYm9keT4KPC9odG1sPgo=
-    http_version: 
+    http_version:
   recorded_at: Sat, 09 Apr 2016 17:36:15 GMT
 recorded_with: VCR 3.0.1

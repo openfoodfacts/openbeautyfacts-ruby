@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/periods-after-opening
+    uri: https://world.openbeautyfacts.org/periods-after-opening
     body:
       encoding: US-ASCII
       string: ''

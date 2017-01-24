@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fr.openbeautyfacts.org/presse
+    uri: https://fr.openbeautyfacts.org/presse
     body:
       encoding: US-ASCII
       string: ''

@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/openfoodfacts/openbeautyfacts-ruby/badge.svg?branch=master)](https://coveralls.io/github/openfoodfacts/openbeautyfacts-ruby?branch=master)
 [![Documentation](http://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](http://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby)
 
-API Wrapper for [Open Beauty Facts](http://openbeautyfacts.org/), the open database about beauty products.
+API Wrapper for [Open Beauty Facts](https://openbeautyfacts.org/), the open database about beauty products.
 
 ## Installation
 
@@ -79,7 +79,7 @@ end
 # Search products
 
 products = Openbeautyfacts::Product.search("Chocolate", locale: 'world', page_size: 3)
-# => [#<Openbeautyfacts::Product _id="3045140105502" code="3045140105502" id="3045140105502" image_small_url="http://en.openbeautyfacts.org/images/products/304/514/010/5502/front.7.100.jpg" lc="en" product_name="Milka au lait du Pays Alpin">, #<Openbeautyfacts::Product _id="3046920028363" code="3046920028363" id="3046920028363" image_small_url="http://en.openbeautyfacts.org/images/products/304/692/002/8363/front.5.100.jpg" lc="en" product_name="Tableta de chocolate negro \"Lindt Excellence\" 85% cacao">, #<Openbeautyfacts::Product _id="3046920029759" code="3046920029759" id="3046920029759" image_small_url="http://en.openbeautyfacts.org/images/products/304/692/002/9759/front.9.100.jpg" lc="en" product_name="Tableta de chocolate negro \"Lindt Excellence\" 90% cacao">]
+# => [#<Openbeautyfacts::Product _id="3045140105502" code="3045140105502" id="3045140105502" image_small_url="https://en.openbeautyfacts.org/images/products/304/514/010/5502/front.7.100.jpg" lc="en" product_name="Milka au lait du Pays Alpin">, #<Openbeautyfacts::Product _id="3046920028363" code="3046920028363" id="3046920028363" image_small_url="https://en.openbeautyfacts.org/images/products/304/692/002/8363/front.5.100.jpg" lc="en" product_name="Tableta de chocolate negro \"Lindt Excellence\" 85% cacao">, #<Openbeautyfacts::Product _id="3046920029759" code="3046920029759" id="3046920029759" image_small_url="https://en.openbeautyfacts.org/images/products/304/692/002/9759/front.9.100.jpg" lc="en" product_name="Tableta de chocolate negro \"Lindt Excellence\" 90% cacao">]
 
 # You might need to fetch full product data from results
 

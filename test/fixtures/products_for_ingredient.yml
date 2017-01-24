@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://world.openbeautyfacts.org/ingredient/water/1
+    uri: https://world.openbeautyfacts.org/ingredient/water/1
     body:
       encoding: US-ASCII
       string: ''

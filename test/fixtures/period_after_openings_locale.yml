@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fr.openbeautyfacts.org/durees-d-utilisation-apres-ouverture
+    uri: https://fr.openbeautyfacts.org/durees-d-utilisation-apres-ouverture
     body:
       encoding: US-ASCII
       string: ''
