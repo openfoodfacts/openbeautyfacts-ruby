@@ -1,11 +1,11 @@
 # Open Beauty Facts
 
-[![Gem Version](https://badge.fury.io/rb/openbeautyfacts.svg)](http://badge.fury.io/rb/openbeautyfacts)
+[![Gem Version](https://badge.fury.io/rb/openbeautyfacts.svg)](https://badge.fury.io/rb/openbeautyfacts)
 [![Build Status](https://travis-ci.org/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](https://travis-ci.org/openfoodfacts/openbeautyfacts-ruby)
 [![Dependency Status](https://gemnasium.com/openfoodfacts/openbeautyfacts-ruby.svg)](https://gemnasium.com/openfoodfacts/openbeautyfacts-ruby)
 [![Code Climate](https://codeclimate.com/github/openfoodfacts/openbeautyfacts-ruby/badges/gpa.svg)](https://codeclimate.com/github/openfoodfacts/openbeautyfacts-ruby)
 [![Coverage Status](https://coveralls.io/repos/github/openfoodfacts/openbeautyfacts-ruby/badge.svg?branch=master)](https://coveralls.io/github/openfoodfacts/openbeautyfacts-ruby?branch=master)
-[![Documentation](http://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](http://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby)
+[![Documentation](https://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](https://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby)
 
 API Wrapper for [Open Beauty Facts](https://openbeautyfacts.org/), the open database about beauty products.
 
