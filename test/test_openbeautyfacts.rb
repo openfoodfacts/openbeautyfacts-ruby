@@ -13,9 +13,7 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_locales
     VCR.use_cassette("index") do
       locales = ::Openbeautyfacts::Locale.all
-      assert_includes locales, "world"
-      assert_includes locales, "fr"
-      assert_includes locales, "es-gl"
+      assert_includes locales.map { |locale| locale['code'] }, "gd"
     end
   end
 
