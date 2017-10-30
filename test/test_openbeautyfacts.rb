@@ -246,6 +246,22 @@ class TestOpenbeautyfacts < Minitest::Test
     end
   end
 
+  # Mission
+
+  def test_it_fetches_missions
+    VCR.use_cassette("missions") do
+      refute_empty ::Openbeautyfacts::Mission.all(locale: 'fr')
+    end
+  end
+
+  def test_it_fetches_mission
+    VCR.use_cassette("mission", record: :once, match_requests_on: [:host, :path]) do
+      mission = ::Openbeautyfacts::Mission.new(url: "https://fr.openbeautyfacts.org/mission/25-produits")
+      mission.fetch
+      refute_empty mission.users
+    end
+  end
+
   # Period after openings
 
   def test_it_fetches_period_after_openings
