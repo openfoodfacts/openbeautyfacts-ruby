@@ -43,6 +43,7 @@ All data is available for World, French, UK and US version for now. You should u
 - Locale
 - ManufacturingPlace
 - Mission
+- NumberOfIngredients
 - Origin
 - PackagerCode
 - Packaging
