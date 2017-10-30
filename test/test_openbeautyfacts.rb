@@ -198,6 +198,54 @@ class TestOpenbeautyfacts < Minitest::Test
     end
   end
 
+  # Entry date
+
+  def test_it_fetches_entry_dates
+    VCR.use_cassette("entry_dates") do
+      entry_dates = ::Openbeautyfacts::EntryDate.all
+      assert_includes entry_dates.map { |entry_date| entry_date['name'] }, "2017-03-09"
+    end
+  end
+
+  def test_it_fetches_entry_dates_for_locale
+    VCR.use_cassette("entry_dates_locale") do
+      entry_dates = ::Openbeautyfacts::EntryDate.all(locale: 'fr')
+      assert_includes entry_dates.map { |entry_date| entry_date['name'] }, "2017-03-09"
+    end
+  end
+
+  def test_it_fetches_products_for_entry_date
+    entry_date = ::Openbeautyfacts::EntryDate.new("url" => "https://world.openbeautyfacts.org/entry-date/2016-02-12")
+    VCR.use_cassette("products_for_entry_date") do
+      products_for_entry_date = entry_date.products(page: -1)
+      refute_empty products_for_entry_date
+    end
+  end
+
+  # Last edit date
+
+  def test_it_fetches_last_edit_dates
+    VCR.use_cassette("last_edit_dates") do
+      last_edit_dates = ::Openbeautyfacts::LastEditDate.all
+      assert_includes last_edit_dates.map { |last_edit_date| last_edit_date['name'] }, "2017-03-23"
+    end
+  end
+
+  def test_it_fetches_last_edit_dates_for_locale
+    VCR.use_cassette("last_edit_dates_locale") do
+      last_edit_dates = ::Openbeautyfacts::LastEditDate.all(locale: 'fr')
+      assert_includes last_edit_dates.map { |last_edit_date| last_edit_date['name'] }, "2017-03-23"
+    end
+  end
+
+  def test_it_fetches_products_for_last_edit_date
+    last_edit_date = ::Openbeautyfacts::LastEditDate.new("url" => "https://world.openbeautyfacts.org/last-edit-date/2016-02-12")
+    VCR.use_cassette("products_for_last_edit_date") do
+      products_for_last_edit_date = last_edit_date.products(page: -1)
+      refute_empty products_for_last_edit_date
+    end
+  end
+
   # Period after openings
 
   def test_it_fetches_period_after_openings
