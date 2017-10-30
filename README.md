@@ -42,6 +42,7 @@ All data is available for World, French, UK and US version for now. You should u
 - LastEditDate
 - Locale
 - ManufacturingPlace
+- Mission
 - Origin
 - PackagerCode
 - Packaging
