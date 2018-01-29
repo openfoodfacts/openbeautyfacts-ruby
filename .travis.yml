@@ -2,7 +2,6 @@ language: ruby
 before_install: gem install bundler --version '1.8'
 install: bundle install
 rvm:
-  - 2.0
   - 2.1
   - 2.2
   - 2.3
