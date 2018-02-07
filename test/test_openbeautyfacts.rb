@@ -103,8 +103,8 @@ class TestOpenbeautyfacts < Minitest::Test
 
   def test_it_fetches_additives
     VCR.use_cassette("additives") do
-      additives = ::Openbeautyfacts::Additive.all(locale: 'fr') # FR to have riskiness
-      assert_equal "https://fr.openbeautyfacts.org/additif/e470-sels-de-sodium-potassium-calcium-d-acides-gras", additives.first.url
+      additives = ::Openbeautyfacts::Additive.all # World to have riskiness
+      assert_includes additives.map { |additive| additive['url'] }, "https://world.openbeautyfacts.org/additive/e508-potassium-chloride"
       refute_nil additives.detect { |additive| !additive['riskiness'].nil? }
     end
   end
@@ -112,7 +112,7 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_additives_for_locale
     VCR.use_cassette("additives_locale") do
       additives = ::Openbeautyfacts::Additive.all(locale: 'fr')
-      assert_equal "https://fr.openbeautyfacts.org/additif/e470-sels-de-sodium-potassium-calcium-d-acides-gras", additives.first.url
+      assert_includes additives.map { |additive| additive['url'] }, "https://fr.openbeautyfacts.org/additif/e470-sels-de-sodium-potassium-calcium-d-acides-gras"
     end
   end
 
