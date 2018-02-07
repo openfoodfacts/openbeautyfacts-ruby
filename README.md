@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/openbeautyfacts.svg)](https://badge.fury.io/rb/openbeautyfacts)
 [![Build Status](https://travis-ci.org/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](https://travis-ci.org/openfoodfacts/openbeautyfacts-ruby)
+[![Build status](https://ci.appveyor.com/api/projects/status/n3t47kwl6hanw87c/branch/master?svg=true)](https://ci.appveyor.com/project/nicolasleger/openbeautyfacts-ruby-3n54g/branch/master)
 [![Dependency Status](https://gemnasium.com/openfoodfacts/openbeautyfacts-ruby.svg)](https://gemnasium.com/openfoodfacts/openbeautyfacts-ruby)
 [![Code Climate](https://codeclimate.com/github/openfoodfacts/openbeautyfacts-ruby/badges/gpa.svg)](https://codeclimate.com/github/openfoodfacts/openbeautyfacts-ruby)
 [![Coverage Status](https://coveralls.io/repos/github/openfoodfacts/openbeautyfacts-ruby/badge.svg?branch=master)](https://coveralls.io/github/openfoodfacts/openbeautyfacts-ruby?branch=master)

@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.1' # Needed for keyword arguments and nokogiri >= 1.7.0
 
   spec.add_runtime_dependency 'hashie', '~> 3.4'
-  spec.add_runtime_dependency 'nokogiri', '~> 1.8'
-  
+  spec.add_runtime_dependency 'nokogiri', '~> 1.7'
+
   spec.add_development_dependency 'bundler', '~> 1.8'
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'minitest', '~> 5.10'
