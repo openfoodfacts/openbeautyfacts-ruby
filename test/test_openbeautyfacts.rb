@@ -153,14 +153,14 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_product_states
     VCR.use_cassette("product_states") do
       product_states = ::Openbeautyfacts::ProductState.all
-      assert_equal "https://world.openbeautyfacts.org/state/empty", product_states.last.url
+      assert_includes product_states.map { |product_state| product_state['url'] }, "https://world.openbeautyfacts.org/state/empty"
     end
   end
 
   def test_it_fetches_product_states_for_locale
     VCR.use_cassette("product_states_locale") do
       product_states = ::Openbeautyfacts::ProductState.all(locale: 'fr')
-      assert_equal "https://fr.openbeautyfacts.org/etat/vide", product_states.last.url
+      assert_includes product_states.map { |product_state| product_state['url'] }, "https://fr.openbeautyfacts.org/etat/vide"
     end
   end
 
