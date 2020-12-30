@@ -5,6 +5,9 @@ environment:
     - RUBY_VERSION: 23
     - RUBY_VERSION: 24
     - RUBY_VERSION: 25
+    - RUBY_VERSION: 26
+    - RUBY_VERSION: 27
+    - RUBY_VERSION: 30
 
 install:
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
