@@ -289,6 +289,7 @@ class TestOpenbeautyfacts < Minitest::Test
   # Period after openings
 
   def test_it_fetches_period_after_openings
+    skip "Source page is gone"
     VCR.use_cassette("period_after_openings") do
       period_after_openings = ::Openbeautyfacts::PeriodAfterOpening.all
       assert_includes period_after_openings.map { |period_after_opening| period_after_opening['name'] }, "12 months"
@@ -296,6 +297,7 @@ class TestOpenbeautyfacts < Minitest::Test
   end
 
   def test_it_fetches_period_after_openings_for_locale
+    skip "Source page is gone"
     VCR.use_cassette("period_after_openings_locale") do
       period_after_openings = ::Openbeautyfacts::PeriodAfterOpening.all(locale: 'fr')
       assert_includes period_after_openings.map { |period_after_opening| period_after_opening['name'] }, "12 mois"
