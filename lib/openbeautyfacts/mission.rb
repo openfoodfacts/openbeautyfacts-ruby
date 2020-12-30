@@ -1,4 +1,5 @@
 require 'hashie'
+require 'open-uri'
 
 module Openbeautyfacts
   class Mission < Hashie::Mash

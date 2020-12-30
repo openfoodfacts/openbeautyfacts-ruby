@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module Openbeautyfacts
   class Locale < String
 
