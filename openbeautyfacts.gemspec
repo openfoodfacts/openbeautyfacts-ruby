@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'openbeautyfacts'
   spec.version       = Openbeautyfacts::VERSION
   spec.authors       = ["Nicolas Leger"]
-  spec.email         = ["nicolas.leger@nleger.com"]
+  spec.email         = ["opensource@nleger.com"]
 
   spec.summary       = "Open Beauty Facts API Wrapper"
   spec.description   = "Open Beauty Facts API Wrapper, the open database about beauty products."
