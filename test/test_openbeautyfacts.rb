@@ -104,7 +104,7 @@ class TestOpenbeautyfacts < Minitest::Test
   def test_it_fetches_additives
     VCR.use_cassette("additives") do
       additives = ::Openbeautyfacts::Additive.all # World to have riskiness
-      assert_includes additives.map { |additive| additive['url'] }, "https://world.openbeautyfacts.org/additive/e508-potassium-chloride"
+      assert_includes additives.map { |additive| additive['url'] }, "https://world.openbeautyfacts.org/additive/e470b-magnesium-salts-of-fatty-acids"
       refute_nil additives.detect { |additive| !additive['riskiness'].nil? }
     end
   end
