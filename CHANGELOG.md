@@ -2,6 +2,13 @@
 
 * Fix Locales
 
+### [0.6.3](https://github.com/openfoodfacts/openbeautyfacts-ruby/compare/v0.6.2...v0.6.3) (2022-02-13)
+
+
+### Bug Fixes
+
+* release ([3f46d9d](https://github.com/openfoodfacts/openbeautyfacts-ruby/commit/3f46d9d0a07980f7822a01c25e53948498308088))
+
 ### [0.6.2](https://github.com/openfoodfacts/openbeautyfacts-ruby/compare/v0.6.1...v0.6.2) (2022-02-13)
 
 
