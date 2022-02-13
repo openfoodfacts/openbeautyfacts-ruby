@@ -11,8 +11,8 @@
          with:
            token: ${{ secrets.GITHUB_TOKEN }}
            release-type: ruby
-           package-name: openfoodfacts
-           version-file: "lib/openfoodfacts/version.rb"
+           package-name: openbeautyfacts
+           version-file: "lib/openbeautyfacts/version.rb"
        # Checkout code if release was created
        - uses: actions/checkout@v2
          if: ${{ steps.release.outputs.release_created }}
