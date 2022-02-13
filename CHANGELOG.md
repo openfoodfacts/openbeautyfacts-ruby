@@ -2,6 +2,13 @@
 
 * Fix Locales
 
+### [0.6.1](https://github.com/openfoodfacts/openbeautyfacts-ruby/compare/v0.6.0...v0.6.1) (2022-02-13)
+
+
+### Bug Fixes
+
+* categories list ([69ee644](https://github.com/openfoodfacts/openbeautyfacts-ruby/commit/69ee644c88fc130c64c3c71acf0cf0ab34b1965e))
+
 ## 0.5.0 (October 30, 2017) ##
 
 * Add Entry and Last Edit Date
