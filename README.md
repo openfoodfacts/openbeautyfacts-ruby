@@ -6,6 +6,9 @@
 [![Documentation](https://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby.svg?branch=master)](https://inch-ci.org/github/openfoodfacts/openbeautyfacts-ruby)
 
 API Wrapper for [Open Beauty Facts](https://openbeautyfacts.org/), the open database about beauty products.
+- We have a similar package for food: https://github.com/openfoodfacts/openfoodfacts-ruby
+- Note: This package needs updates for the newest APIs.
+- Please see on https://wiki.openfoodfacts.org/API/Ruby how to join the community to help
 
 ## Installation
 
