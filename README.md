@@ -1,4 +1,4 @@
-# Open Beauty Facts
+# Open Beauty Facts Ruby SDK
 
 [![Gem Version](https://badge.fury.io/rb/openbeautyfacts.svg)](https://badge.fury.io/rb/openbeautyfacts)
 [![Build Status](https://github.com/openfoodfacts/openbeautyfacts-ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/openfoodfacts/openbeautyfacts-ruby/actions/workflows/ruby.yml)
