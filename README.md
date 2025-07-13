@@ -1,5 +1,11 @@
 # Open Beauty Facts Ruby SDK
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://static.openbeautyfacts.org/images/logos/obf-logo-horizontal-dark.png?refresh_github_cache=1">
+  <source media="(prefers-color-scheme: light)" srcset="https://static.openbeautyfacts.org/images/logos/obf-logo-horizontal-light.png?refresh_github_cache=1">
+  <img height="48" src="https://static.openbeautyfacts.org/images/logos/obf-logo-horizontal-light.svg"/>
+</picture>
+
 [![Gem Version](https://badge.fury.io/rb/openbeautyfacts.svg)](https://badge.fury.io/rb/openbeautyfacts)
 [![Build Status](https://github.com/openfoodfacts/openbeautyfacts-ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/openfoodfacts/openbeautyfacts-ruby/actions/workflows/ruby.yml)
 [![RuboCop](https://github.com/openfoodfacts/openbeautyfacts-ruby/actions/workflows/rubocop-analysis.yml/badge.svg)](https://github.com/openfoodfacts/openbeautyfacts-ruby/actions/workflows/rubocop-analysis.yml)
