@@ -1,0 +1,28 @@
+name: Publish gem on Rubygems
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - uses: actions/checkout@v5
+        with: # Load existing tags to avoid duplicate tag error
+          fetch-depth: 0
+          fetch-tags: true
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ vars.RUBY_VERSION }}
+          bundler-cache: true
+      - name: Build gem
+        run: gem build *.gemspec
+      - name: Publish gem
+        uses: rubygems/release-gem@v1
