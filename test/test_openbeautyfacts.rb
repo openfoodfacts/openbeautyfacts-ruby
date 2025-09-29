@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'minitest_helper'
+require 'uri'
 
 class TestOpenbeautyfacts < Minitest::Test
   # Gem
@@ -167,7 +168,7 @@ class TestOpenbeautyfacts < Minitest::Test
       # Just check that we get states and they have proper French URLs
       refute_empty product_states
       assert product_states.first.key?('url')
-      assert product_states.first['url'].include?('fr.openbeautyfacts.org')
+      assert_equal 'fr.openbeautyfacts.org', URI(product_states.first['url']).host
     end
   end
 
