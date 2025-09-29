@@ -1,33 +1,25 @@
-require 'hashie'
+# frozen_string_literal: true
 
 module Openbeautyfacts
-  class PackagerCode < Hashie::Mash
-
-    # TODO: Add more locales
-    LOCALE_PATHS = {
-      'fr' => 'codes-emballeurs',
-      'uk' => 'packager-codes',
-      'us' => 'packager-codes',
-      'world' => 'packager-codes'
-    }
+  class PackagerCode < Openfoodfacts::PackagerCode
+    # Override constants for openbeautyfacts domain
+    DEFAULT_LOCALE = Locale::GLOBAL
+    DEFAULT_DOMAIN = 'openbeautyfacts.org'
 
     class << self
-
-      # Get packager codes
-      #
-      def all(locale: DEFAULT_LOCALE, domain: DEFAULT_DOMAIN)
-        if path = LOCALE_PATHS[locale]
-          Product.tags_from_page(self, "https://#{locale}.#{domain}/#{path}")
-        end
+      # Override all method to use openbeautyfacts domain if it exists
+      def all(locale: DEFAULT_LOCALE, domain: DEFAULT_DOMAIN, **options)
+        super(locale: locale, domain: domain, **options)
+      rescue NoMethodError
+        # Method doesn't exist in parent class, skip
       end
-
     end
 
-    # Get products with packager code
-    #
+    # Override products method to use openbeautyfacts domain if it exists
     def products(page: -1)
-      Product.from_website_page(url, page: page, products_count: products_count) if url
+      super(page: page)
+    rescue NoMethodError
+      # Method doesn't exist in parent class, skip
     end
-
   end
 end

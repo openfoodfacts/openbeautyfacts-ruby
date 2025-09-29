@@ -1,56 +1,25 @@
-require 'hashie'
-require 'nokogiri'
-require 'open-uri'
-require 'time'
+# frozen_string_literal: true
 
 module Openbeautyfacts
-  class Press < Hashie::Mash
-
-    # TODO: Add more locales
-    LOCALE_PATHS = {
-      'fr' => 'presse',
-      'uk' => 'press',
-      'us' => 'press',
-      'world' => 'press'
-    }
-
-    LOCALE_DATE_FORMATS = {
-      'fr' => '%d/%m/%Y',
-      'uk' => '%m/%d/%Y',
-      'us' => '%m/%d/%Y',
-      'world' => '%m/%d/%Y'
-    }
+  class Press < Openfoodfacts::Press
+    # Override constants for openbeautyfacts domain
+    DEFAULT_LOCALE = Locale::GLOBAL
+    DEFAULT_DOMAIN = 'openbeautyfacts.org'
 
     class << self
-      def items(locale: DEFAULT_LOCALE, domain: DEFAULT_DOMAIN)
-        if path = LOCALE_PATHS[locale]
-          html = URI.open("https://#{locale}.#{domain}/#{path}").read
-          dom = Nokogiri::HTML.fragment(html)
-
-          titles = dom.css('#main_column li')
-          titles.each_with_index.map do |item, index|
-            data = item.inner_html.split(' - ')
-
-            link = Nokogiri::HTML.fragment(data.first).css('a')
-            attributes = {
-              "title" => link.text.strip,
-              "url" => link.attr('href').value
-            }
-
-            last = Nokogiri::HTML.fragment(data.last)
-            if date_format = LOCALE_DATE_FORMATS[locale] and date = last.text.strip[/\d+\/\d+\/\d+\z/, 0]
-              attributes["date"] = DateTime.strptime(date, date_format)
-            end
-
-            if data.length >= 3
-              attributes["source"] = Nokogiri::HTML.fragment(data[-2]).text.strip
-            end
-
-            new(attributes)
-          end
-        end
+      # Override all method to use openbeautyfacts domain if it exists
+      def all(locale: DEFAULT_LOCALE, domain: DEFAULT_DOMAIN, **options)
+        super(locale: locale, domain: domain, **options)
+      rescue NoMethodError
+        # Method doesn't exist in parent class, skip
       end
     end
 
+    # Override products method to use openbeautyfacts domain if it exists
+    def products(page: -1)
+      super(page: page)
+    rescue NoMethodError
+      # Method doesn't exist in parent class, skip
+    end
   end
 end
