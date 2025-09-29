@@ -1,3 +1,11 @@
+## [0.11.0](https://github.com/openfoodfacts/openbeautyfacts-ruby/compare/v0.10.0...v0.11.0) (2025-09-29)
+
+
+### Features
+
+* remove 'test' directory from gemspec files ([55f9b79](https://github.com/openfoodfacts/openbeautyfacts-ruby/commit/55f9b797eeb0b65c130e9554bdba7ba437ad795a))
+
+
 ## [0.10.0](https://github.com/openfoodfacts/openbeautyfacts-ruby/compare/v0.6.3...v0.10.0) (2025-09-29)
 
 
