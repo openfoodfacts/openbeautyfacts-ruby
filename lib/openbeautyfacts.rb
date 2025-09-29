@@ -1,3 +1,7 @@
+require 'openfoodfacts'
+
+require_relative 'openbeautyfacts/version'
+require_relative 'openbeautyfacts/locale'
 require_relative 'openbeautyfacts/additive'
 require_relative 'openbeautyfacts/brand'
 require_relative 'openbeautyfacts/category'
@@ -10,7 +14,6 @@ require_relative 'openbeautyfacts/ingredient'
 require_relative 'openbeautyfacts/ingredient_that_may_be_from_palm_oil'
 require_relative 'openbeautyfacts/label'
 require_relative 'openbeautyfacts/last_edit_date'
-require_relative 'openbeautyfacts/locale'
 require_relative 'openbeautyfacts/manufacturing_place'
 require_relative 'openbeautyfacts/mission'
 require_relative 'openbeautyfacts/number_of_ingredients'
@@ -25,11 +28,6 @@ require_relative 'openbeautyfacts/purchase_place'
 require_relative 'openbeautyfacts/store'
 require_relative 'openbeautyfacts/trace'
 require_relative 'openbeautyfacts/user'
-require_relative 'openbeautyfacts/version'
-
-require 'json'
-require 'nokogiri'
-require 'open-uri'
 
 module Openbeautyfacts
 

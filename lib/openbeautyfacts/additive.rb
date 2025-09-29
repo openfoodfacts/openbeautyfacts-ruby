@@ -1,51 +1,19 @@
-require 'hashie'
-
 module Openbeautyfacts
-  class Additive < Hashie::Mash
-
-    # TODO: Add more locales
-    LOCALE_PATHS = {
-      'fr' => 'additifs',
-      'uk' => 'additives',
-      'us' => 'additives',
-      'world' => 'additives'
-    }
+  class Additive < Openfoodfacts::Additive
+    # Override constants for openbeautyfacts domain
+    DEFAULT_LOCALE = Locale::GLOBAL
+    DEFAULT_DOMAIN = 'openbeautyfacts.org'
 
     class << self
-
-      # Get additives
-      #
+      # Override all method to use openbeautyfacts domain
       def all(locale: DEFAULT_LOCALE, domain: DEFAULT_DOMAIN)
-        if path = LOCALE_PATHS[locale]
-          page_url = "https://#{locale}.#{domain}/#{path}"
-
-          Product.tags_from_page(self, page_url) do |tag|
-            columns = tag.css('td')
-
-            link = tag.css('a').first
-            attributes = {
-              "name" => link.text.strip,
-              "url" => URI.join(page_url, link.attr('href')).to_s,
-              "products_count" => columns[1].text.to_i,
-            }
-
-            riskiness = columns[3].attr('class')
-            if riskiness
-              attributes["riskiness"] = riskiness[/level_(\d+)/, 1].to_i
-            end
-
-            new(attributes)
-          end
-        end
+        super(locale: locale, domain: domain)
       end
-
     end
 
-    # Get products with additive
-    #
+    # Override products method to use openbeautyfacts domain
     def products(page: -1)
-      Product.from_website_page(url, page: page, products_count: products_count) if url
+      super(page: page)
     end
-
   end
 end
