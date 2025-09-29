@@ -98,7 +98,7 @@ puts "Product URL: #{Openbeautyfacts::Product.url('test', locale: 'world')}"
 - The gem connects to `openbeautyfacts.org` for live data
 - Tests use VCR (Video Cassette Recorder) to mock HTTP requests
 - In network-restricted environments, only basic functionality (class loading, URL generation) can be tested
-- Real API calls require setting `OPENFOODFACTS_USER_AGENT` environment variable
+- Real API calls require setting `OPENBEAUTYFACTS_USER_AGENT` environment variable
 
 ### Common Issues
 - **Permission errors during gem install**: Use `--user-install` flag and update PATH
