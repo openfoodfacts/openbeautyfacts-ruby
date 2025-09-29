@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Origin < Openfoodfacts::Origin
     # Override constants for openbeautyfacts domain

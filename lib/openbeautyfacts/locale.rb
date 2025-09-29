@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Locale < Openfoodfacts::Locale
     # Override constants for openbeautyfacts domain

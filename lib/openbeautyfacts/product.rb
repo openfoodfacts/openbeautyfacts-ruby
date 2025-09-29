@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Product < Openfoodfacts::Product
     # Override constants for openbeautyfacts domain
@@ -19,7 +21,8 @@ module Openbeautyfacts
       end
 
       # Override search method to use openbeautyfacts domain
-      def search(terms, locale: DEFAULT_LOCALE, page: 1, page_size: 20, sort_by: 'unique_scans_n', domain: DEFAULT_DOMAIN)
+      def search(terms, locale: DEFAULT_LOCALE, page: 1, page_size: 20, sort_by: 'unique_scans_n',
+                 domain: DEFAULT_DOMAIN)
         super(terms, locale: locale, page: page, page_size: page_size, sort_by: sort_by, domain: domain)
       end
     end

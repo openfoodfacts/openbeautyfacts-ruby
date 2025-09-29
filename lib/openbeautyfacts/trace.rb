@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Trace < Openfoodfacts::Trace
     # Override constants for openbeautyfacts domain

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class PeriodAfterOpening < Openfoodfacts::PeriodAfterOpening
     # Override constants for openbeautyfacts domain

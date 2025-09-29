@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Allergen < Openfoodfacts::Allergen
     # Override constants for openbeautyfacts domain

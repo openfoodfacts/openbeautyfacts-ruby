@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'openfoodfacts'
 
 require_relative 'openbeautyfacts/version'
@@ -30,12 +32,10 @@ require_relative 'openbeautyfacts/trace'
 require_relative 'openbeautyfacts/user'
 
 module Openbeautyfacts
-
   DEFAULT_LOCALE = Locale::GLOBAL
   DEFAULT_DOMAIN = 'openbeautyfacts.org'
 
   class << self
-
     # Return locale from link
     #
     def locale_from_link(link)
@@ -59,6 +59,5 @@ module Openbeautyfacts
     def product_url(barcode, locale: DEFAULT_LOCALE)
       Product.url(barcode, locale: locale)
     end
-
   end
 end

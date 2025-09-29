@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class LastEditDate < Openfoodfacts::LastEditDate
     # Override constants for openbeautyfacts domain

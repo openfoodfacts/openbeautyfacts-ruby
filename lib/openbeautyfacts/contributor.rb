@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Contributor < Openfoodfacts::Contributor
     # Override constants for openbeautyfacts domain

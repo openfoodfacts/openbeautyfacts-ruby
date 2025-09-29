@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Additive < Openfoodfacts::Additive
     # Override constants for openbeautyfacts domain

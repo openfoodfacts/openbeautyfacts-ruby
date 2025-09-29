@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Press < Openfoodfacts::Press
     # Override constants for openbeautyfacts domain

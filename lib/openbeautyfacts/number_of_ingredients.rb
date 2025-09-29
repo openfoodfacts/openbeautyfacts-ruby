@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class NumberOfIngredients < Openfoodfacts::NumberOfIngredients
     # Override constants for openbeautyfacts domain

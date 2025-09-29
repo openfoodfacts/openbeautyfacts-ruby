@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Category < Openfoodfacts::Category
     # Override constants for openbeautyfacts domain

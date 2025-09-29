@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class IngredientThatMayBeFromPalmOil < Openfoodfacts::IngredientThatMayBeFromPalmOil
     # Override constants for openbeautyfacts domain

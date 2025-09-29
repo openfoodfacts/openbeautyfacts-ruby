@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openbeautyfacts
   class Mission < Openfoodfacts::Mission
     # Override constants for openbeautyfacts domain
