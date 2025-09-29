@@ -2,6 +2,18 @@
 
 * Fix Locales
 
+## [0.7.0](https://github.com/openfoodfacts/openbeautyfacts-ruby/compare/v0.6.3...v0.7.0) (2025-09-29)
+
+
+### Features
+
+* inherit from openfoodfacts gem classes while maintaining Openbeautyfacts namespace ([#60](https://github.com/openfoodfacts/openbeautyfacts-ruby/issues/60)) ([33a3af3](https://github.com/openfoodfacts/openbeautyfacts-ruby/commit/33a3af349ed09c843ead3a069242befb71954129))
+
+
+### Bug Fixes
+
+* failing tests by updating expectations to match current API behavior ([#63](https://github.com/openfoodfacts/openbeautyfacts-ruby/issues/63)) ([f475f07](https://github.com/openfoodfacts/openbeautyfacts-ruby/commit/f475f0744faa11be2770296365ee102d5d7cc62f))
+
 ### [0.6.3](https://github.com/openfoodfacts/openbeautyfacts-ruby/compare/v0.6.2...v0.6.3) (2022-02-13)
 
 
