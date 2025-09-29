@@ -288,7 +288,10 @@ module Openbeautyfacts
       alias find get
 
       def url(code, locale: DEFAULT_LOCALE, domain: DEFAULT_DOMAIN)
-        super(code, locale: locale, domain: domain)
+        if code
+          path = "api/v0/produit/#{code}.json"
+          "https://#{locale}.#{domain}/#{path}"
+        end
       end
 
       def search(terms, locale: DEFAULT_LOCALE, page: 1, page_size: 20, sort_by: 'unique_scans_n', domain: DEFAULT_DOMAIN)
