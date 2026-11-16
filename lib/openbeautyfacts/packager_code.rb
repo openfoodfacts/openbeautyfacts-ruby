@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts packager code resource.
   class PackagerCode < Openfoodfacts::PackagerCode
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

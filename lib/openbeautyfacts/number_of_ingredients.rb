@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts number of ingredients resource.
   class NumberOfIngredients < Openfoodfacts::NumberOfIngredients
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL
