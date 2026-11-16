@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'openfoodfacts', '~> 0.10.0'
   # Depencies of openfoodfacts
-  spec.add_runtime_dependency 'hashie', '>= 3.4', '< 6.0'
+  spec.add_runtime_dependency 'hashie', '>= 3.4', '< 7.0'
   spec.add_runtime_dependency 'nokogiri', '~> 1.16'
 
   spec.add_development_dependency 'bundler', '~> 2.1'
