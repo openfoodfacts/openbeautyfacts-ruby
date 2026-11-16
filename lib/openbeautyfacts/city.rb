@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts city resource.
   class City < Openfoodfacts::City
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

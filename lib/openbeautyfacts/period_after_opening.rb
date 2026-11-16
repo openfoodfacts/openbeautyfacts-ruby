@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts period after opening resource.
   class PeriodAfterOpening < Openfoodfacts::PeriodAfterOpening
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

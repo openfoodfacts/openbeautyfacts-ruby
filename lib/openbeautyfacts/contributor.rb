@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts contributor resource.
   class Contributor < Openfoodfacts::Contributor
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

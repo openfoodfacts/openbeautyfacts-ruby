@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts entry date resource.
   class EntryDate < Openfoodfacts::EntryDate
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

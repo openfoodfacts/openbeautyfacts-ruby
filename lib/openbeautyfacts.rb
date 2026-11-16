@@ -31,6 +31,7 @@ require_relative 'openbeautyfacts/store'
 require_relative 'openbeautyfacts/trace'
 require_relative 'openbeautyfacts/user'
 
+# Open Beauty Facts Ruby API wrapper.
 module Openbeautyfacts
   DEFAULT_LOCALE = Locale::GLOBAL
   DEFAULT_DOMAIN = 'openbeautyfacts.org'
