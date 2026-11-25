@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts last edit date resource.
   class LastEditDate < Openfoodfacts::LastEditDate
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts ingredient that may be from palm oil resource.
   class IngredientThatMayBeFromPalmOil < Openfoodfacts::IngredientThatMayBeFromPalmOil
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

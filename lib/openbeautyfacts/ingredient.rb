@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts ingredient resource.
   class Ingredient < Openfoodfacts::Ingredient
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Openbeautyfacts
+  # Open Beauty Facts purchase place resource.
   class PurchasePlace < Openfoodfacts::PurchasePlace
     # Override constants for openbeautyfacts domain
     DEFAULT_LOCALE = Locale::GLOBAL
